@@ -2,6 +2,8 @@ package com.zenai.submissiondicoding.model;
 
 import com.zenai.submissiondicoding.R;
 
+import java.util.ArrayList;
+
 public class CourseData {
 
     private static String[] courseName = {
@@ -76,4 +78,15 @@ public class CourseData {
       R.drawable.belajar_membuat_aplikasi_flutter_untuk_pemula_logo_230320223038
     };
 
+    public static ArrayList<Course> getListData(){
+        ArrayList<Course> list = new ArrayList<>();
+        for(int position = 0; position < courseName.length; position++){
+            Course course = new Course();
+            course.setName(courseName[position]);
+            course.setDetail(courseDetail[position]);
+            course.setPhoto(courseImages[position]);
+            list.add(course);
+        }
+        return list;
+    }
 }

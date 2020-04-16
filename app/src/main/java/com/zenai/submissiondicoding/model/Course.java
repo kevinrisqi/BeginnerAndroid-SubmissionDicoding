@@ -4,7 +4,7 @@ public class Course {
     private String name;
     private String detail;
     private String explanation;
-    private String photo;
+    private int photo;
 
     public String getName() {
         return name;
@@ -30,11 +30,11 @@ public class Course {
         this.explanation = explanation;
     }
 
-    public String getPhoto() {
+    public int getPhoto() {
         return photo;
     }
 
-    public void setPhoto(String photo) {
+    public void setPhoto(int photo) {
         this.photo = photo;
     }
 }
