@@ -85,6 +85,7 @@ public class CourseData {
             course.setName(courseName[position]);
             course.setDetail(courseDetail[position]);
             course.setPhoto(courseImages[position]);
+            course.setExplanation(courseExplanation[position]);
             list.add(course);
         }
         return list;
