@@ -20,6 +20,12 @@ public class ListCourseAdapter extends RecyclerView.Adapter<ListCourseAdapter.Li
 
     private ArrayList<Course> listCourse;
 
+    private OnItemClickCallback onItemClickCallback;
+
+    public void setOnItemClickCallback(OnItemClickCallback onItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback;
+    }
+
     public ListCourseAdapter(ArrayList<Course> list) {
         this.listCourse = list;
     }
@@ -32,7 +38,7 @@ public class ListCourseAdapter extends RecyclerView.Adapter<ListCourseAdapter.Li
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ListViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final ListViewHolder holder, int position) {
         Course course = listCourse.get(position);
         Glide.with(holder.itemView.getContext())
                 .load(course.getPhoto())
@@ -40,6 +46,13 @@ public class ListCourseAdapter extends RecyclerView.Adapter<ListCourseAdapter.Li
                 .into(holder.imgPhoto);
         holder.tvName.setText(course.getName());
         holder.tvDetail.setText(course.getDetail());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onItemClickCallback.onItemClicked(listCourse.get(holder.getAdapterPosition()));
+            }
+        });
     }
 
     @Override
@@ -59,5 +72,9 @@ public class ListCourseAdapter extends RecyclerView.Adapter<ListCourseAdapter.Li
             tvDetail = itemView.findViewById(R.id.tv_item_detail);
             imgPhoto = itemView.findViewById(R.id.img_item_photo);
         }
+    }
+
+    public interface OnItemClickCallback {
+        void onItemClicked(Course data);
     }
 }
