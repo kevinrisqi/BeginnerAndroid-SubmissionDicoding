@@ -2,6 +2,8 @@ package com.zenai.submissiondicoding.model;
 
 public class Course {
     private String name;
+    private String category;
+    private double rating;
     private String detail;
     private String explanation;
     private int photo;
@@ -36,5 +38,21 @@ public class Course {
 
     public void setPhoto(int photo) {
         this.photo = photo;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public double getRating() {
+        return rating;
+    }
+
+    public void setRating(double rating) {
+        this.rating = rating;
     }
 }
