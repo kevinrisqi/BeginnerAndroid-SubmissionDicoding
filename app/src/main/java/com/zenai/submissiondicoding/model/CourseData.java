@@ -42,22 +42,22 @@ public class CourseData {
             "Multi-Platform App Developer"
     };
 
-    private static double[] courseRating = {
-            4.9,
-            4.7,
-            4.7,
-            4.8,
-            4.5,
-            5.0,
-            4.3,
-            4.4,
-            4.4,
-            4.6,
-            4.6,
-            4.4,
-            4.1,
-            4.5,
-            4.6
+    private static String[] courseRating = {
+            "4.9",
+            "4.7",
+            "4.7",
+            "4.8",
+            "4.5",
+            "5.0",
+            "4.3",
+            "4.4",
+            "4.4",
+            "4.6",
+            "4.6",
+            "4.4",
+            "4.1",
+            "4.5",
+            "4.6"
     };
 
     private static String[] courseDetail = {

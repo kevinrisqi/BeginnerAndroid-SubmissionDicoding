@@ -50,7 +50,7 @@
                 android:textStyle="bold"
                 android:textSize="15sp"
                 android:drawableLeft="@drawable/ic_star_black_24dp"
-                android:padding="2dp"/>
+                android:paddingRight="3dp"/>
 
             <TextView
                 android:id="@+id/tv_item_detail"

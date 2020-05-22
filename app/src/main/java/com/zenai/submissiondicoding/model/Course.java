@@ -3,7 +3,7 @@ package com.zenai.submissiondicoding.model;
 public class Course {
     private String name;
     private String category;
-    private double rating;
+    private String rating;
     private String detail;
     private String explanation;
     private int photo;
@@ -48,11 +48,11 @@ public class Course {
         this.category = category;
     }
 
-    public double getRating() {
+    public String getRating() {
         return rating;
     }
 
-    public void setRating(double rating) {
+    public void setRating(String rating) {
         this.rating = rating;
     }
 }

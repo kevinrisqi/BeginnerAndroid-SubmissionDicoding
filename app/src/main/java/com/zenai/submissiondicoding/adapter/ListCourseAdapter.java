@@ -45,6 +45,8 @@ public class ListCourseAdapter extends RecyclerView.Adapter<ListCourseAdapter.Li
                 .apply(new RequestOptions().override(55,55))
                 .into(holder.imgPhoto);
         holder.tvName.setText(course.getName());
+        holder.tvCategory.setText(course.getCategory());
+        holder.tvRating.setText(course.getRating());
         holder.tvDetail.setText(course.getDetail());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -63,11 +65,14 @@ public class ListCourseAdapter extends RecyclerView.Adapter<ListCourseAdapter.Li
     public class ListViewHolder extends RecyclerView.ViewHolder {
 
         ImageView imgPhoto;
-        TextView tvName, tvDetail;
+        TextView tvName, tvDetail, tvCategory, tvRating;
 
         public ListViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            tvName = itemView.findViewById(R.id.tv_item_name);
+            tvCategory = itemView.findViewById(R.id.tv_item_category);
+            tvRating = itemView.findViewById(R.id.tv_item_rating);
             tvName = itemView.findViewById(R.id.tv_item_name);
             tvDetail = itemView.findViewById(R.id.tv_item_detail);
             imgPhoto = itemView.findViewById(R.id.img_item_photo);
