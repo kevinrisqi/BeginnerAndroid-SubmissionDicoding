@@ -42,7 +42,7 @@ public class ListCourseAdapter extends RecyclerView.Adapter<ListCourseAdapter.Li
         Course course = listCourse.get(position);
         Glide.with(holder.itemView.getContext())
                 .load(course.getPhoto())
-                .apply(new RequestOptions().override(55,55))
+                //.apply(new RequestOptions().override(55,55))
                 .into(holder.imgPhoto);
         holder.tvName.setText(course.getName());
         holder.tvCategory.setText(course.getCategory());
