@@ -10,6 +10,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.zenai.submissiondicoding.activities.AboutActivity;
+import com.zenai.submissiondicoding.activities.ContentActivity;
 import com.zenai.submissiondicoding.adapter.ListCourseAdapter;
 import com.zenai.submissiondicoding.model.Course;
 import com.zenai.submissiondicoding.model.CourseData;
@@ -43,7 +45,9 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()){
             case R.id.about_menu:
-                Toast.makeText(this, "About Menu", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "About Menu", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this, AboutActivity.class);
+                startActivity(intent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -72,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         String explanation = course.getExplanation();
         int photo = course.getPhoto();
 
-        Intent intent = new Intent(this,ContentActivity.class);
+        Intent intent = new Intent(this, ContentActivity.class);
         Bundle bundle = new Bundle();
         bundle.putString("NAME_KEY",name);
         bundle.putString("CATEGORY_KEY",category);

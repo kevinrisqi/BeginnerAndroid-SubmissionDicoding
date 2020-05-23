@@ -1,4 +1,4 @@
-package com.zenai.submissiondicoding;
+package com.zenai.submissiondicoding.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
+import com.zenai.submissiondicoding.R;
 
 public class ContentActivity extends AppCompatActivity {
 
